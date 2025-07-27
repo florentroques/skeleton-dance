@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>スケルトン（ガイコツ）ダンス</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    iframe {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
 </head>
 <body>
   <iframe
@@ -12,9 +23,13 @@
     src="https://www.youtube-nocookie.com/embed/k7X0QxyypJA?si=dokNH0CNPE91qAxM?enablejsapi=1&rel=0&cc_load_policy=1&cc_lang_pref=ja&hl=ja"
     title="スケルトン（ガイコツ）ダンス"
     frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen
   ></iframe>
+  <script>
+    const tag = document.createElement("script");
+    tag.src = "//www.youtube.com/player_api";
+    const firstScriptTag = document.getElementsByTagName("script")[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  </script>
 </body>
 </html>
